@@ -14,6 +14,7 @@ public class ColeccionLibros {
         System.out.println("4. Mostrar espacios disponibles");
         System.out.println("5. Mostrar toda la colección"+mostrarTotalLibros());
         int opcion = validarIngreso();
+        seleccionarOpcionMenu(opcion);
     }
 
     private static int validarIngreso() {
@@ -30,8 +31,7 @@ public class ColeccionLibros {
         return entrada;
     }
 
-
-    private void seleccionarOpcionMenu(int opcion) {
+    private static void seleccionarOpcionMenu(int opcion) {
         switch (opcion) {
             case 1:
                 System.out.println(agregarLibro());
@@ -46,18 +46,37 @@ public class ColeccionLibros {
         }
     }
 
-    private static int[] agregarLibro(int[] añadir) {
-        for (int i = 0; i < añadir.length; i++) {
-            for (int j = 0; j < añadir[i]; j++) {
-                char voto = añadir();
-                añadir[i] = voto;
+    private static boolean[] mostrarTodaLaColeccion() {
+        boolean[] coleccion = new boolean[0];
+        for (int i = 0; i < coleccion.length; i++) {
+            System.out.println(Arrays.toString(coleccion));
+        }
+        return coleccion;
+    }
+
+    private static void mostrarEspaciosDisponibles(String[] espaciosDisponibles) {
+        for (int i = 0; i < espaciosDisponibles.length; i++) {
+            System.out.println(Arrays.toString(espaciosDisponibles));
+        }
+    }
+
+    private static int[] agregarLibro() {
+        int[] agregaLibro = new int[0];
+        for (int i = 0; i < agregaLibro.length; i++) {
+            for (int j = 0; j < agregaLibro[i]; j++) {
+                int añade = añadir();
+                agregaLibro[i] = añade;
             }
         }
-        return añadir;
+        return agregaLibro;
+    }
+
+    private static int añadir() {
+        return 0;
     }
 
     private static boolean buscarLibro(){
-
+        System.out.println(mostrarBusquedaDeLibro();
         return false;
     }
 
@@ -85,5 +104,4 @@ public class ColeccionLibros {
             System.out.println(Arrays.toString(librosContenidos[i]));
         }
     }
-
 }
