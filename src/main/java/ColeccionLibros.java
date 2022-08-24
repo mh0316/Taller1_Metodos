@@ -13,9 +13,10 @@ public class ColeccionLibros {
         System.out.println("3. Mostrar espacios usados");
         System.out.println("4. Mostrar espacios disponibles");
         System.out.println("5. Mostrar toda la colección");
+        int opcion = validarIngreso();
     }
 
-    public static int validarIngreso() {
+    private static int validarIngreso() {
         Scanner teclado = new Scanner(System.in);
         int entrada;
         do {
@@ -30,18 +31,13 @@ public class ColeccionLibros {
     }
 
 
-    private void seleccionarOpcionMenu(int opcion){
-        switch (opcion){
+    private void seleccionarOpcionMenu(int opcion) {
+        switch (opcion) {
             case 1:
                 System.out.println(agregarLibro());
             case 2:
                 System.out.println(buscarLibro());
-            case 3:
-                System.out.println(mostrarEspaciosUsados());
-            case 4:
-                System.out.println(mostrarEspaciosDisponibles());
-            case 5:
-                System.out.println(mostrarTodaLaColeccion);
+
         }
     }
 
