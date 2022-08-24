@@ -15,7 +15,7 @@ public class ColeccionLibros {
         System.out.println("5. Mostrar toda la colección");
     }
 
-    public static int ingresar() {
+    public static int validarIngreso() {
         Scanner teclado = new Scanner(System.in);
         int entrada;
         do {
